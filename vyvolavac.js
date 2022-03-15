@@ -51,5 +51,4 @@ function tahnoutJmeno() {
 
     let seznam = document.querySelector('#seznam');
     seznam.textContent = tazenaJmena;
-
 }
