@@ -48,7 +48,8 @@ h2 {
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-#seznam {
+#seznam,
+#pocitadlo {
 	font-size: 20px;
 	color: #3b518d;
 }
@@ -74,4 +75,8 @@ h2 {
 .tlacitko:active {
 	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 	transform: translateY(3px);
+}
+
+#restart {
+  margin-top: 20px;;
 }

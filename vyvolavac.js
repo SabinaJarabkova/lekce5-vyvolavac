@@ -34,21 +34,45 @@ function tahnoutJmeno() {
         return;
     }
 
-    // Generujeme náhodný index
-    let vyherniIndex = Math.floor(Math.random() * jmena.length);
+  // Generujeme náhodný index
+  let vyherniIndex = Math.floor(Math.random() * jmena.length);
 
-    // Získáme výherní jméno na patřičném indexu
-    let vyherniJmeno = jmena[vyherniIndex];
+  // Získáme výherní jméno na patřičném indexu
+  let vyherniJmeno = jmena[vyherniIndex];
 
-    // Vyřadíme vylosované jméno z osudí
-    jmena.splice(vyherniIndex, 1);
+  // Vyřadíme vylosované jméno z osudí
+  jmena.splice(vyherniIndex, 1);
 
-    // Výherní jméno si uložíme do pole k ostatním výherním
-    tazenaJmena.push(vyherniJmeno);
 
-    let vyherce = document.querySelector('#vyherka');
-    vyherce.textContent = vyherniJmeno;
+  // Výherní jméno si uložíme do pole k ostatním výherním a dame ho na zacatek
+  tazenaJmena.unshift(vyherniJmeno);
 
-    let seznam = document.querySelector('#seznam');
-    seznam.textContent = tazenaJmena;
+  let vyherce = document.querySelector('#vyherka');
+  vyherce.textContent = vyherniJmeno;
+
+  let seznam = document.querySelector('#seznam');
+  seznam.textContent = tazenaJmena;
+  //arraymove();
+
+  //pocitadlo
+  let pocitadlo = document.getElementById('pocitadlo');
+  let pocetCelkem = tazenaJmena.length;
+  console.log(pocetCelkem);
+  pocitadlo.textContent = pocetCelkem;
+
 }
+
+//restart
+function restartVyvolavani() {
+  window.location.reload();
+}
+
+
+
+
+// function arraymove(tazenaJmena, -1, 0) {
+//   let element = tazenaJmena[-1];
+//   tazenaJmena.splice(-1, 1);
+//   tazenaJmena.splice(0, 0, element);
+//   console.log(tazenaJmena);
+// }
